@@ -1,0 +1,307 @@
+--------------------Configuration: 7za_vc4_ppc1 - Win32 (PPC) Debug--------------------
+
+
+Microsoft (R) Program Maintenance Utility   Version 1.61.6038
+Copyright (C) Microsoft Corp 1988-1996. All rights reserved.
+
+ if not exist "PPCRel" mkdir "PPCRel"
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yc"StdAfx.h" /FpPPCRel\a.pch StdAfx.cpp
+StdAfx.cpp
+Vc4Compat.h(22) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Console\ConsoleClose.cpp
+ConsoleClose.cpp
+..\..\UI\Console\ConsoleClose.h(8) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\ConsoleClose.cpp(36) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Console\ExtractCallbackConsole.cpp
+ExtractCallbackConsole.cpp
+..\..\..\Common/Defs.h(14) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Defs.h(17) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/MyVector.h(26) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/MyVector.h(159) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/MyString.h(53) : error C2065: 'UINT_PTR' : undeclared identifier
+..\..\..\Common/MyString.h(53) : error C2146: syntax error : missing ';' before identifier 'CharUpperA'
+..\..\..\Common/MyString.h(53) : error C2144: syntax error : missing ')' before type 'unsigned int'
+..\..\..\Common/MyString.h(53) : error C2064: term does not evaluate to a function
+..\..\..\Common/MyString.h(62) : error C2146: syntax error : missing ';' before identifier 'CharLowerA'
+..\..\..\Common/MyString.h(62) : error C2144: syntax error : missing ')' before type 'unsigned int'
+..\..\..\Common/MyString.h(62) : error C2064: term does not evaluate to a function
+..\..\..\Common/MyString.h(315) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/MyString.h(587) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/MyString.h(591) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/MyString.h(595) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/MyString.h(599) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/MyString.h(603) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/MyString.h(607) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/MyString.h(611) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/StdOutStream.h(12) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/StdOutStream.h(19) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/StdOutStream.h(20) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/StdOutStream.h(21) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(28) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(31) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(39) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(41) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(42) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(44) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(45) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(46) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(47) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(49) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(55) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(56) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(56) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(57) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(59) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(60) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(60) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(61) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(63) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(64) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(72) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(73) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(74) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(74) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(77) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(78) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(79) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(79) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(89) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(90) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(91) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(92) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(93) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Windows/FileIO.h(94) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Common/MyCom.h(41) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Common/MyCom.h(146) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/FileStreams.h(33) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/FileStreams.h(36) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/FileStreams.h(40) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/FileStreams.h(40) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/FileStreams.h(43) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/FileStreams.h(43) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/FileStreams.h(82) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/FileStreams.h(82) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/FileStreams.h(87) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/FileStreams.h(94) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/FileStreams.h(94) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/FileStreams.h(99) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/FileStreams.h(112) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/FileStreams.h(116) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Archive/IArchive.h(102) : error C2061: syntax error : identifier 'PROPVARIANT'
+..\..\UI\Console\../../Archive/IArchive.h(139) : error C2061: syntax error : identifier 'PROPVARIANT'
+..\..\UI\Console\../../Archive/IArchive.h(139) : error C2061: syntax error : identifier 'PROPVARIANT'
+..\..\UI\Console\../../Archive/IArchive.h(156) : error C2061: syntax error : identifier 'PROPVARIANT'
+..\..\UI\Console\../../Archive/IArchive.h(166) : error C2061: syntax error : identifier 'PROPVARIANT'
+..\..\UI\Console\../../Archive/IArchive.h(182) : error C2143: syntax error : missing ')' before '*'
+..\..\UI\Console\../../Archive/IArchive.h(182) : error C2059: syntax error : '*'
+..\..\UI\Console\../../Archive/IArchive.h(182) : error C2143: syntax error : missing ';' before '*'
+..\..\UI\Console\../../Archive/IArchive.h(182) : error C2501: 'values' : missing decl-specifiers
+..\..\UI\Console\../../Archive/IArchive.h(182) : error C2501: 'Int32' : missing decl-specifiers
+..\..\UI\Console\../../Archive/IArchive.h(182) : error C2146: syntax error : missing ';' before identifier 'numProperties'
+..\..\UI\Console\../../Archive/IArchive.h(182) : error C2059: syntax error : ')'
+..\..\UI\Console\../../Archive/IArchive.h(182) : error C2501: 'numProperties' : missing decl-specifiers
+..\..\UI\Console\../Common/IFileExtractCallback.h(29) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/IFileExtractCallback.h(31) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/IFileExtractCallback.h(37) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/../../Common/../ICoder.h(60) : error C2143: syntax error : missing ')' before '*'
+..\..\UI\Console\../Common/../../Common/../ICoder.h(60) : error C2059: syntax error : '*'
+..\..\UI\Console\../Common/../../Common/../ICoder.h(60) : error C2143: syntax error : missing ';' before '*'
+..\..\UI\Console\../Common/../../Common/../ICoder.h(60) : error C2501: 'properties' : missing decl-specifiers
+..\..\UI\Console\../Common/../../Common/../ICoder.h(60) : error C2501: 'UInt32' : missing decl-specifiers
+..\..\UI\Console\../Common/../../Common/../ICoder.h(60) : error C2146: syntax error : missing ';' before identifier 'numProperties'
+..\..\UI\Console\../Common/../../Common/../ICoder.h(60) : error C2059: syntax error : ')'
+..\..\UI\Console\../Common/../../Common/../ICoder.h(60) : error C2501: 'numProperties' : missing decl-specifiers
+..\..\UI\Console\../Common/../../Common/../ICoder.h(131) : error C2061: syntax error : identifier 'PROPVARIANT'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(72) : error C2059: syntax error : 'template'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(75) : error C2238: unexpected token(s) preceding ';'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(77) : error C2143: syntax error : missing ';' before '}'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(72) : error C2059: syntax error : 'template'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(75) : error C2238: unexpected token(s) preceding ';'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(77) : error C2143: syntax error : missing ';' before '}'
+..\..\UI\Console\../Common/../../Common/ProgressUtils.h(17) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/../../Common/ProgressUtils.h(22) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/../../Common/ProgressUtils.h(23) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/../../Common/ProgressUtils.h(26) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Common/MyCom.h(72) : error C2059: syntax error : 'template'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(75) : error C2238: unexpected token(s) preceding ';'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(77) : error C2143: syntax error : missing ';' before '}'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(72) : error C2059: syntax error : 'template'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(75) : error C2238: unexpected token(s) preceding ';'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(77) : error C2143: syntax error : missing ';' before '}'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(72) : error C2059: syntax error : 'template'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(75) : error C2238: unexpected token(s) preceding ';'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(77) : error C2143: syntax error : missing ';' before '}'
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(50) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(54) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(56) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(57) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(58) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(60) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(69) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(70) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(71) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(73) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(74) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../../Common/../../Common/MyCom.h(72) : error C2059: syntax error : 'template'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(75) : error C2238: unexpected token(s) preceding ';'
+..\..\UI\Console\../../Common/../../Common/MyCom.h(77) : error C2143: syntax error : missing ';' before '}'
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(85) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(88) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(105) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(110) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\../Common/ArchiveExtractCallback.h(122) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\ExtractCallbackConsole.h(36) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\ExtractCallbackConsole.h(39) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\ExtractCallbackConsole.h(42) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\ExtractCallbackConsole.h(51) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\UI\Console\ConsoleClose.h(8) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(14) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(15) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(22) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(23) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(24) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(25) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(25) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(31) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(31) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(31) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(32) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(33) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(33) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(33) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(44) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(45) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(45) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(45) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(45) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(46) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(46) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(48) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(49) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(51) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(51) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(51) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(52) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(52) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(54) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(54) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(54) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(71) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(73) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(73) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(74) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Common/Wildcard.h(74) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/Defs.h(6) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/Defs.h(10) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/Defs.h(14) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/Defs.h(17) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/Defs.h(20) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(17) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(18) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(20) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(21) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(24) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(26) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(27) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(28) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(29) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(30) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(31) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(32) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(35) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(36) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(37) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(38) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(39) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(40) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(41) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(45) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(47) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(49) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(50) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(51) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(53) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(55) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(56) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(57) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(60) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(62) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(64) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(65) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(69) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(70) : error C2061: syntax error : identifier 'UINT32'
+..\..\..\Windows/FileDir.h(72) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(73) : error C2061: syntax error : identifier 'UINT32'
+..\..\..\Windows/FileDir.h(76) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(79) : error C2065: 'UINT32' : undeclared identifier
+..\..\..\Windows/FileDir.h(79) : error C2146: syntax error : missing ';' before identifier 'value'
+..\..\..\Windows/FileDir.h(79) : error C2065: 'value' : undeclared identifier
+..\..\..\Windows/FileDir.h(80) : error C2661: 'MySearchPath' : no overloaded function takes 5 parameters
+..\..\..\Windows/FileDir.h(84) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(87) : error C2146: syntax error : missing ';' before identifier 'value'
+..\..\..\Windows/FileDir.h(88) : error C2661: 'MySearchPath' : no overloaded function takes 5 parameters
+..\..\..\Windows/FileDir.h(92) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(94) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(104) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(111) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(112) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(120) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(127) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(128) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(132) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(136) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(142) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(143) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(158) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(164) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileDir.h(165) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(17) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(18) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(19) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(20) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(21) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(22) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(23) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(23) : error C2065: 'FILE_ATTRIBUTE_ENCRYPTED' : undeclared identifier
+..\..\..\Windows/FileFind.h(28) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(28) : error C2061: syntax error : identifier 'UINT32'
+..\..\..\Windows/FileFind.h(37) : error C2501: 'UINT32' : missing decl-specifiers
+..\..\..\Windows/FileFind.h(37) : error C2146: syntax error : missing ';' before identifier 'ReparseTag'
+..\..\..\Windows/FileFind.h(37) : error C2501: 'ReparseTag' : missing decl-specifiers
+..\..\..\Windows/FileFind.h(42) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(43) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(44) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(45) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(46) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(47) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(48) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(49) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(50) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(51) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(52) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(53) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(57) : error C2504: 'CFileInfoBase' : base class undefined
+..\..\..\Windows/FileFind.h(60) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(67) : error C2504: 'CFileInfoBase' : base class undefined
+..\..\..\Windows/FileFind.h(70) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(79) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(82) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(82) : error C2061: syntax error : identifier 'CFileInfo'
+..\..\..\Windows/FileFind.h(83) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(83) : error C2061: syntax error : identifier 'CFileInfo'
+..\..\..\Windows/FileFind.h(85) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(85) : error C2061: syntax error : identifier 'CFileInfoW'
+..\..\..\Windows/FileFind.h(86) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(86) : error C2061: syntax error : identifier 'CFileInfoW'
+..\..\..\Windows/FileFind.h(86) : error C2535: 'int __cdecl CFindFile::FindNext(void)' : member function already defined or declared
+..\..\..\Windows/FileFind.h(88) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(91) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(91) : error C2061: syntax error : identifier 'CFileInfo'
+..\..\..\Windows/FileFind.h(93) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(95) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+..\..\..\Windows/FileFind.h(95) : error C2061: syntax error : identifier 'CFileInfoW'
+..\..\..\Windows/FileFind.h(95) : fatal error C1903: unable to recover from previous error(s); stopping compilation
+NMAKE : fatal error U1077: 'cl.exe' : return code '0x2'
+Stop.
+Error executing NMAKE.
+7za_vc4_ppc1.exe - 71 error(s), 220 warning(s)

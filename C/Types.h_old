@@ -1,6 +1,5 @@
 /* Types.h -- Basic types
-2008-11-23 : Igor Pavlov : Public domain
-2024 patch : added _M_PPC guard for __fastcall (VC++4 PPC port) */
+2008-11-23 : Igor Pavlov : Public domain */
 
 #ifndef __7Z_TYPES_H
 #define __7Z_TYPES_H
@@ -94,14 +93,7 @@ typedef int Bool;
 
 #define MY_CDECL __cdecl
 #define MY_STD_CALL __stdcall
-
-/* __fastcall is x86-only. On PowerPC NT (VC++4 with /machine:MPPC),
-   _M_PPC is defined and __fastcall is not supported. */
-#ifdef _M_PPC
-#define MY_FAST_CALL
-#else
 #define MY_FAST_CALL MY_NO_INLINE __fastcall
-#endif
 
 #else
 

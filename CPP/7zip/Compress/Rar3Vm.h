@@ -87,6 +87,8 @@ struct CCommand
   ECommand OpCode;
   bool ByteMode;
   COperand Op1, Op2;
+  bool operator==(const CCommand &) const { return false; }
+  bool operator<(const CCommand &)  const { return false; }
 };
 
 struct CBlockRef

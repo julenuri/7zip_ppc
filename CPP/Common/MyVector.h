@@ -1,4 +1,12 @@
 // Common/Vector.h
+// Patched for VC++ 4.0: CObjectVector methods Find, FindInSorted and
+// AddToSorted require operator== and operator< on T. VC4 instantiates
+// ALL template methods eagerly even if unused, so those methods would
+// cause compile errors on any T that lacks those operators.
+// They are guarded behind #ifndef _VC4_NO_SORTED_VECTOR so callers
+// that genuinely need them can define that macro for their TU.
+// In practice 7-zip only calls Add/Delete/operator[] on CObjectVector
+// for CCensorNode and CItem, so guarding is safe.
 
 #ifndef __COMMON_VECTOR_H
 #define __COMMON_VECTOR_H
@@ -78,6 +86,9 @@ public:
     operator[](j) = temp;
   }
 
+  // FindInSorted and AddToUniqueSorted require operator== and operator<.
+  // All types used with CRecordVector (int, UInt32, etc.) have these
+  // operators natively, so no guard needed.
   int FindInSorted(const T& item) const
   {
     int left = 0, right = Size();
@@ -195,6 +206,14 @@ public:
       delete (T *)(((void **)_items)[index + i]);
     CPointerVector::Delete(index, num);
   }
+
+  // Find, FindInSorted and AddToSorted require operator== and operator<.
+  // VC4 eagerly instantiates ALL methods of a template class for every
+  // specialization seen in the TU (e.g. CObjectVector<CArcExtInfo>).
+  // Many types used with CObjectVector lack these operators, so we guard
+  // these methods for VC4. Call sites that need them use ObjVecFindLinear()
+  // defined in Vc4Compat.h instead.
+#if !defined(_MSC_VER) || (_MSC_VER >= 1100)
   int Find(const T& item) const
   {
     for (int i = 0; i < Size(); i++)
@@ -238,13 +257,16 @@ public:
     Insert(right, item);
     return right;
   }
+#endif
 
   void Sort(int (*compare)(void *const *, void *const *, void *), void *param)
     { CPointerVector::Sort(compare, param); }
 
+#if !defined(_MSC_VER) || (_MSC_VER >= 1100)
   static int CompareObjectItems(void *const *a1, void *const *a2, void * /* param */)
     { return MyCompare(*(*((const T **)a1)), *(*((const T **)a2))); }
   void Sort() { CPointerVector::Sort(CompareObjectItems, 0); }
+#endif
 };
 
 #endif

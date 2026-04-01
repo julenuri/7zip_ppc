@@ -14,12 +14,16 @@ struct CBindPair
 {
   UInt32 InIndex;
   UInt32 OutIndex;
+  bool operator==(const CBindPair &) const { return false; }
+  bool operator<(const CBindPair &)  const { return false; }
 };
 
 struct CCoderStreamsInfo
 {
   UInt32 NumInStreams;
   UInt32 NumOutStreams;
+  bool operator==(const CCoderStreamsInfo &) const { return false; }
+  bool operator<(const CCoderStreamsInfo &)  const { return false; }
 };
 
 struct CBindInfo

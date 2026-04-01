@@ -1,0 +1,220 @@
+--------------------Configuration: 7za_vc4_ppc1 - Win32 (PPC) Debug--------------------
+
+
+Microsoft (R) Program Maintenance Utility   Version 1.61.6038
+Copyright (C) Microsoft Corp 1988-1996. All rights reserved.
+
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yc"StdAfx.h" /FpPPCRel\a.pch StdAfx.cpp
+StdAfx.cpp
+Vc4Compat.h(17) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Console\ConsoleClose.cpp
+ConsoleClose.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Console\ExtractCallbackConsole.cpp
+ExtractCallbackConsole.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Console\List.cpp
+List.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Console\Main.cpp
+Main.cpp
+C:\MSDEV\INCLUDE\basetyps.h(207) : warning C4005: 'DEFINE_GUID' : macro redefinition
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Console\MainAr.cpp
+MainAr.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Console\OpenCallbackConsole.cpp
+OpenCallbackConsole.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Console\PercentPrinter.cpp
+PercentPrinter.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Console\UpdateCallbackConsole.cpp
+UpdateCallbackConsole.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Console\UserInputUtils.cpp
+UserInputUtils.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\CommandLineParser.cpp
+CommandLineParser.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\CRC.cpp
+CRC.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\IntToString.cpp
+IntToString.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\ListFileUtils.cpp
+ListFileUtils.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\MyString.cpp
+MyString.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\MyVector.cpp
+MyVector.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\MyWindows.cpp
+MyWindows.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\NewHandler.cpp
+NewHandler.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\Random.cpp
+Random.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\StdInStream.cpp
+StdInStream.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\StdOutStream.cpp
+StdOutStream.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\StringConvert.cpp
+StringConvert.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\StringToInt.cpp
+StringToInt.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\UTFConvert.cpp
+UTFConvert.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Common\Wildcard.cpp
+Wildcard.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Windows\DLL.cpp
+DLL.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Windows\Error.cpp
+Error.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Windows\FileDir.cpp
+FileDir.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Windows\FileFind.cpp
+FileFind.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Windows\FileIO.cpp
+FileIO.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Windows\FileName.cpp
+FileName.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Windows\MemoryLock.cpp
+MemoryLock.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Windows\PropVariant.cpp
+PropVariant.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Windows\PropVariantConversions.cpp
+PropVariantConversions.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Windows\Synchronization.cpp
+Synchronization.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Windows\System.cpp
+System.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\..\Windows\Time.cpp
+Time.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\CreateCoder.cpp
+CreateCoder.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\FilePathAutoRename.cpp
+FilePathAutoRename.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\FileStreams.cpp
+FileStreams.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\FilterCoder.cpp
+FilterCoder.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\InBuffer.cpp
+InBuffer.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\InOutTempBuffer.cpp
+InOutTempBuffer.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\LimitedStreams.cpp
+LimitedStreams.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\LockedStream.cpp
+LockedStream.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\MemBlocks.cpp
+MemBlocks.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\MethodId.cpp
+MethodId.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\MethodProps.cpp
+MethodProps.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\OffsetStream.cpp
+OffsetStream.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\OutBuffer.cpp
+OutBuffer.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\OutMemStream.cpp
+OutMemStream.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\ProgressMt.cpp
+ProgressMt.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\ProgressUtils.cpp
+ProgressUtils.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\StreamBinder.cpp
+StreamBinder.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\StreamObjects.cpp
+StreamObjects.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\StreamUtils.cpp
+StreamUtils.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\VirtThread.cpp
+VirtThread.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\ArchiveCommandLine.cpp
+ArchiveCommandLine.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\ArchiveExtractCallback.cpp
+ArchiveExtractCallback.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\ArchiveOpenCallback.cpp
+ArchiveOpenCallback.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\DefaultName.cpp
+DefaultName.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\EnumDirItems.cpp
+EnumDirItems.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\Extract.cpp
+Extract.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\ExtractingFilePath.cpp
+ExtractingFilePath.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\LoadCodecs.cpp
+LoadCodecs.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\OpenArchive.cpp
+OpenArchive.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\PropIDUtils.cpp
+PropIDUtils.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\SetProperties.cpp
+SetProperties.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\SortUtils.cpp
+SortUtils.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\TempFiles.cpp
+TempFiles.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\Update.cpp
+Update.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\UpdateAction.cpp
+UpdateAction.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\UpdateCallback.cpp
+UpdateCallback.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\UpdatePair.cpp
+UpdatePair.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\UpdateProduce.cpp
+UpdateProduce.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\WorkDir.cpp
+WorkDir.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\ZHandler.cpp
+ZHandler.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\Common\CoderMixer2.cpp
+CoderMixer2.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\Common\CoderMixer2MT.cpp
+CoderMixer2MT.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\Common\CrossThreadProgress.cpp
+CrossThreadProgress.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\Common\DummyOutStream.cpp
+DummyOutStream.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\Common\FindSignature.cpp
+FindSignature.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\Common\HandlerOut.cpp
+HandlerOut.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\Common\InStreamWithCRC.cpp
+InStreamWithCRC.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\Common\ItemNameUtils.cpp
+ItemNameUtils.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\Common\MultiStream.cpp
+MultiStream.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\Common\OutStreamWithCRC.cpp
+OutStreamWithCRC.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\Common\ParseProperties.cpp
+ParseProperties.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\7z\7zCompressionMode.cpp
+7zCompressionMode.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\7z\7zDecode.cpp
+7zDecode.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\7z\7zEncode.cpp
+7zEncode.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\7z\7zExtract.cpp
+7zExtract.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\7z\7zFolderInStream.cpp
+7zFolderInStream.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\7z\7zFolderOutStream.cpp
+7zFolderOutStream.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\7z\7zHandler.cpp
+7zHandler.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\7z\7zHandlerOut.cpp
+7zHandlerOut.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\7z\7zHeader.cpp
+7zHeader.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\7z\7zIn.cpp
+7zIn.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\7z\7zOut.cpp
+7zOut.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\7z\7zProperties.cpp
+7zProperties.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\7z\7zSpecStream.cpp
+7zSpecStream.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\7z\7zUpdate.cpp
+7zUpdate.cpp
+..\..\Archive\7z\../Common/../../../Common/MyVector.h(99) : error C2678: binary '==' : no operator defined which takes a left-hand operand of type 'const struct NArchive::N7z::CRefItem' (or there is no acceptable conversion) (new behavior; please see help)
+..\..\Archive\7z\../Common/../../../Common/MyVector.h(101) : error C2678: binary '<' : no operator defined which takes a left-hand operand of type 'const struct NArchive::N7z::CRefItem' (or there is no acceptable conversion) (new behavior; please see help)
+..\..\Archive\7z\../Common/../../../Common/MyVector.h(116) : error C2678: binary '==' : no operator defined which takes a left-hand operand of type 'const struct NArchive::N7z::CRefItem' (or there is no acceptable conversion) (new behavior; please see help)
+..\..\Archive\7z\../Common/../../../Common/MyVector.h(118) : error C2678: binary '<' : no operator defined which takes a left-hand operand of type 'const struct NArchive::N7z::CRefItem' (or there is no acceptable conversion) (new behavior; please see help)
+NMAKE : fatal error U1077: 'cl.exe' : return code '0x2'
+Stop.
+Error executing NMAKE.
+7za_vc4_ppc1.exe - 5 error(s), 2 warning(s)

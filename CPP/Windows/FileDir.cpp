@@ -16,6 +16,7 @@ extern bool g_IsNT;
 
 namespace NWindows {
 namespace NFile {
+using namespace NFind;
 
 #if defined(WIN_LONG_PATH) && defined(_UNICODE)
 #define WIN_LONG_PATH2

@@ -150,7 +150,7 @@ STDMETHODIMP CFilterCoder::Flush()
     _bufferPos = 0;
   }
   CMyComPtr<IOutStreamFlush> flush;
-  _outStream.QueryInterface(IID_IOutStreamFlush, &flush);
+  _outStream.QueryInterface(IID_IOutStreamFlush, (void**)&flush);
   if (flush)
     return  flush->Flush();
   return S_OK;

@@ -91,6 +91,7 @@ UString ConvertPropVariantToString(const PROPVARIANT &prop)
     default:
       #ifndef _WIN32_WCE
       throw 150245;
+      return UString();
       #else
       return UString();
       #endif
@@ -108,6 +109,7 @@ UInt64 ConvertPropVariantToUInt64(const PROPVARIANT &prop)
     default:
       #ifndef _WIN32_WCE
       throw 151199;
+      return 0;
       #else
       return 0;
       #endif

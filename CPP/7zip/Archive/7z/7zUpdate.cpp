@@ -256,6 +256,8 @@ struct CRefItem
       }
     }
   }
+  bool operator==(const CRefItem&) const { return false; }
+  bool operator<(const CRefItem&)  const { return false; }
 };
 
 static int CompareUpdateItems(const CRefItem *p1, const CRefItem *p2, void *param)

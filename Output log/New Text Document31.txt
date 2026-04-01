@@ -1,0 +1,31 @@
+--------------------Configuration: 7za_vc4_ppc1 - Win32 Debug--------------------
+
+
+Microsoft (R) Program Maintenance Utility   Version 1.61.6038
+Copyright (C) Microsoft Corp 1988-1996. All rights reserved.
+
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Compress\BcjCoder.cpp
+BcjCoder.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Compress\BcjRegister.cpp
+BcjRegister.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Compress\BitlDecoder.cpp
+BitlDecoder.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Compress\BranchCoder.cpp
+BranchCoder.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Compress\BranchMisc.cpp
+BranchMisc.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Compress\BranchRegister.cpp
+BranchRegister.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Compress\ByteSwap.cpp
+ByteSwap.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Compress\ByteSwapRegister.cpp
+ByteSwapRegister.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Compress\BZip2Crc.cpp
+BZip2Crc.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Compress\BZip2Decoder.cpp
+BZip2Decoder.cpp
+..\..\Compress\BZip2Decoder.cpp(228) : error C2665: 'CBitDecoderAdapter<class NBitm::CDecoder<class CInBuffer> >::CBitDecoderAdapter<class NBitm::CDecoder<class CInBuffer> >' : none of the 2 overloads can convert parameter 1 from type 'class NBitm::CDecoder<class CInBuffer> ** ' (new behavior; please see help)
+NMAKE : fatal error U1077: 'cl.exe' : return code '0x2'
+Stop.
+Error executing NMAKE.
+7za_vc4_ppc1.exe - 2 error(s), 0 warning(s)

@@ -1,0 +1,11 @@
+# Ignorar carpetas
+.vs/
+CPP/7zip/Bundles/Alone/PPCRel
+
+# Ignorar archivos específicos
+.env
+.DS_Store
+7zip_ppc.sln
+7zip_ppc.vcxproj
+7zip_ppc.vcxproj.filters
+7zip_ppc.vcxproj.user

@@ -114,6 +114,8 @@ struct CMvItem
 {
   int VolumeIndex;
   int ItemIndex;
+  bool operator==(const CMvItem &) const { return false; }
+  bool operator<(const CMvItem &)  const { return false; }
 };
 
 class CMvDatabaseEx

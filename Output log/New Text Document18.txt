@@ -1,0 +1,17 @@
+--------------------Configuration: 7za_vc4_ppc1 - Win32 (PPC) Debug--------------------
+
+
+Microsoft (R) Program Maintenance Utility   Version 1.61.6038
+Copyright (C) Microsoft Corp 1988-1996. All rights reserved.
+
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\ArchiveCommandLine.cpp
+ArchiveCommandLine.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\ArchiveExtractCallback.cpp
+ArchiveExtractCallback.cpp
+..\..\UI\Common\ArchiveExtractCallback.cpp(49) : error C2664: 'QueryInterface' : cannot convert parameter 2 from 'struct ICompressProgressInfo ** ' to 'void ** ' (new behavior; please see help)
+..\..\UI\Common\ArchiveExtractCallback.cpp(377) : error C2579: '+(const unsigned short *,const class CStringBase<unsigned short> &)' : parameter list not sufficiently different from '+(const unsigned short *,const class CStringBase<unsigned short> &)'
+..\..\UI\Common\ArchiveExtractCallback.cpp(377) : fatal error C1903: unable to recover from previous error(s); stopping compilation
+NMAKE : fatal error U1077: 'cl.exe' : return code '0x2'
+Stop.
+Error executing NMAKE.
+7za_vc4_ppc1.exe - 4 error(s), 0 warning(s)

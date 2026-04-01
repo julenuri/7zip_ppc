@@ -1,4 +1,7 @@
 // MyCom.h
+// Patched for VC++ 4.0: member function templates inside a class template
+// are not supported (_MSC_VER < 1100). QueryInterface<Q> replaced with
+// a plain void** overload that callers can use identically.
 
 #ifndef __MYCOM_H
 #define __MYCOM_H
@@ -17,6 +20,11 @@ public:
   // typedef T _PtrClass;
   CMyComPtr() { _p = NULL;}
   CMyComPtr(T* p) {if ((_p = p) != NULL) p->AddRef(); }
+  // VC4: NULL is (int)0. Without this constructor, Add(NULL) on
+  // CObjectVector<CMyComPtr<T>> fails because int cannot convert to T*.
+#if defined(_MSC_VER) && (_MSC_VER < 1100)
+  CMyComPtr(int null) { _p = NULL; }
+#endif
   CMyComPtr(const CMyComPtr<T>& lp)
   {
     if ((_p = lp._p) != NULL)
@@ -26,7 +34,22 @@ public:
   void Release() { if (_p) { _p->Release(); _p = NULL; } }
   operator T*() const {  return (T*)_p;  }
   // T& operator*() const {  return *_p; }
+  // VC4 does not support member function templates, so our QueryInterface
+  // takes void** instead of Q**. But other COM functions (GetStream, etc.)
+  // still need T**. We use a proxy struct that converts to both, letting
+  // the compiler pick the right type based on the call site context.
+#if defined(_MSC_VER) && (_MSC_VER < 1100)
+  struct CPtrRef
+  {
+    T** _pp;
+    CPtrRef(T** pp) : _pp(pp) {}
+    operator T**()   const { return _pp; }
+    operator void**() const { return (void**)_pp; }
+  };
+  CPtrRef operator&() { return CPtrRef(&_p); }
+#else
   T** operator&() { return &_p; }
+#endif
   T* operator->() const { return _p; }
   T* operator=(T* p)
   {
@@ -58,21 +81,16 @@ public:
     return ::CoCreateInstance(rclsid, pUnkOuter, dwClsContext, iid, (void**)&_p);
   }
   #endif
-  /*
-  HRESULT CoCreateInstance(LPCOLESTR szProgID, LPUNKNOWN pUnkOuter = NULL, DWORD dwClsContext = CLSCTX_ALL)
+
+  // VC++ 4.0 does not support member function templates inside a class
+  // template. The original:
+  //   template <class Q>
+  //   HRESULT QueryInterface(REFGUID iid, Q** pp) const { ... }
+  // is replaced with a plain void** overload. All call sites in 7-zip
+  // pass a pointer-to-interface-pointer, so the cast is safe.
+  HRESULT QueryInterface(REFGUID iid, void** pp) const
   {
-    CLSID clsid;
-    HRESULT hr = CLSIDFromProgID(szProgID, &clsid);
-    ATLASSERT(_p == NULL);
-    if (SUCCEEDED(hr))
-      hr = ::CoCreateInstance(clsid, pUnkOuter, dwClsContext, __uuidof(T), (void**)&_p);
-    return hr;
-  }
-  */
-  template <class Q>
-  HRESULT QueryInterface(REFGUID iid, Q** pp) const
-  {
-    return _p->QueryInterface(iid, (void**)pp);
+    return _p->QueryInterface(iid, pp);
   }
 };
 
@@ -158,10 +176,10 @@ public:
 #define MY_QUERYINTERFACE_BEGIN STDMETHOD(QueryInterface) \
     (REFGUID iid, void **outObject) {
 
-#define MY_QUERYINTERFACE_ENTRY(i) if (iid == IID_ ## i) \
+#define MY_QUERYINTERFACE_ENTRY(i) if (IS_GUID_EQUAL(iid, IID_ ## i)) \
     { *outObject = (void *)(i *)this; AddRef(); return S_OK; }
 
-#define MY_QUERYINTERFACE_ENTRY_UNKNOWN(i) if (iid == IID_IUnknown) \
+#define MY_QUERYINTERFACE_ENTRY_UNKNOWN(i) if (IS_GUID_EQUAL(iid, IID_IUnknown)) \
     { *outObject = (void *)(IUnknown *)(i *)this; AddRef(); return S_OK; }
 
 #define MY_QUERYINTERFACE_BEGIN2(i) MY_QUERYINTERFACE_BEGIN \

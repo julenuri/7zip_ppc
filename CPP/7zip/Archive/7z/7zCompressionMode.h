@@ -25,6 +25,8 @@ struct CBind
   UInt32 InStream;
   UInt32 OutCoder;
   UInt32 OutStream;
+  bool operator==(const CBind &) const { return false; }
+  bool operator<(const CBind &)  const { return false; }
 };
 
 struct CCompressionMethodMode

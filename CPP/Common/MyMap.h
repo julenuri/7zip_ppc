@@ -15,7 +15,9 @@ class CMap32
     UInt32 Values[2];
     UInt16 Len;
     Byte IsLeaf[2];
-  };
+  bool operator==(const CNode &) const { return false; }
+  bool operator<(const CNode &)  const { return false; }
+};
   CRecordVector<CNode> Nodes;
 
 public:

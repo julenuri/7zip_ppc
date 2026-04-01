@@ -1,4 +1,7 @@
 // Windows/PropVariant.h
+// Patched for VC++ 4.0: since bool is typedef'd as int in Vc4Compat.h,
+// CPropVariant(bool) and CPropVariant(Int32) would be duplicate signatures.
+// The bool overloads are compiled only on VC5+ where bool is a native type.
 
 #ifndef __WINDOWS_PROPVARIANT_H
 #define __WINDOWS_PROPVARIANT_H
@@ -18,7 +21,13 @@ public:
   CPropVariant(const CPropVariant& varSrc);
   CPropVariant(BSTR bstrSrc);
   CPropVariant(LPCOLESTR lpszSrc);
+
+  // bool overloads: only compiled on VC5+ where bool is a distinct native type.
+  // On VC4, bool is typedef int, so these would clash with Int32 overloads.
+#if !defined(_MSC_VER) || (_MSC_VER >= 1100)
   CPropVariant(bool bSrc) { vt = VT_BOOL; wReserved1 = 0; boolVal = (bSrc ? VARIANT_TRUE : VARIANT_FALSE); };
+#endif
+
   CPropVariant(UInt32 value) { vt = VT_UI4; wReserved1 = 0; ulVal = value; }
   CPropVariant(UInt64 value) { vt = VT_UI8; wReserved1 = 0; uhVal = *(ULARGE_INTEGER*)&value; }
   CPropVariant(const FILETIME &value) { vt = VT_FILETIME; wReserved1 = 0; filetime = value; }
@@ -31,7 +40,11 @@ public:
   CPropVariant& operator=(const PROPVARIANT& varSrc);
   CPropVariant& operator=(BSTR bstrSrc);
   CPropVariant& operator=(LPCOLESTR lpszSrc);
+
+#if !defined(_MSC_VER) || (_MSC_VER >= 1100)
   CPropVariant& operator=(bool bSrc);
+#endif
+
   CPropVariant& operator=(UInt32 value);
   CPropVariant& operator=(UInt64 value);
   CPropVariant& operator=(const FILETIME &value);

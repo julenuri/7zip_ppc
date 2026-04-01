@@ -1,0 +1,36 @@
+--------------------Configuration: 7za_vc4_ppc1 - Win32 (PPC) Debug--------------------
+
+
+Microsoft (R) Program Maintenance Utility   Version 1.61.6038
+Copyright (C) Microsoft Corp 1988-1996. All rights reserved.
+
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Archive\Cab\CabHandler.cpp
+CabHandler.cpp
+..\..\Archive\Cab\../../Compress/DeflateDecoder.h(33) : error C2039: 'NHuffman' : is not a member of 'NCompress'
+..\..\Archive\Cab\../../Compress/DeflateDecoder.h(33) : error C2501: 'CDecoder' : missing decl-specifiers
+..\..\Archive\Cab\../../Compress/DeflateDecoder.h(33) : error C2143: syntax error : missing ';' before '<'
+..\..\Archive\Cab\../../Compress/DeflateDecoder.h(33) : error C2238: unexpected token(s) preceding ';'
+..\..\Archive\Cab\../../Compress/DeflateDecoder.h(34) : error C2039: 'NHuffman' : is not a member of 'NCompress'
+..\..\Archive\Cab\../../Compress/DeflateDecoder.h(34) : error C2501: 'CDecoder' : missing decl-specifiers
+..\..\Archive\Cab\../../Compress/DeflateDecoder.h(34) : error C2143: syntax error : missing ';' before '<'
+..\..\Archive\Cab\../../Compress/DeflateDecoder.h(34) : error C2238: unexpected token(s) preceding ';'
+..\..\Archive\Cab\../../Compress/DeflateDecoder.h(35) : error C2039: 'NHuffman' : is not a member of 'NCompress'
+..\..\Archive\Cab\../../Compress/DeflateDecoder.h(35) : error C2501: 'CDecoder' : missing decl-specifiers
+..\..\Archive\Cab\../../Compress/DeflateDecoder.h(35) : error C2143: syntax error : missing ';' before '<'
+..\..\Archive\Cab\../../Compress/DeflateDecoder.h(35) : error C2238: unexpected token(s) preceding ';'
+..\..\Archive\Cab\../../Compress/LzxDecoder.h(112) : error C2039: 'NHuffman' : is not a member of 'NCompress'
+..\..\Archive\Cab\../../Compress/LzxDecoder.h(112) : error C2059: syntax error : '<'
+..\..\Archive\Cab\../../Compress/LzxDecoder.h(112) : error C2238: unexpected token(s) preceding ';'
+..\..\Archive\Cab\../../Compress/LzxDecoder.h(113) : error C2039: 'NHuffman' : is not a member of 'NCompress'
+..\..\Archive\Cab\../../Compress/LzxDecoder.h(113) : error C2059: syntax error : '<'
+..\..\Archive\Cab\../../Compress/LzxDecoder.h(113) : error C2238: unexpected token(s) preceding ';'
+..\..\Archive\Cab\../../Compress/LzxDecoder.h(114) : error C2039: 'NHuffman' : is not a member of 'NCompress'
+..\..\Archive\Cab\../../Compress/LzxDecoder.h(114) : error C2059: syntax error : '<'
+..\..\Archive\Cab\../../Compress/LzxDecoder.h(114) : error C2238: unexpected token(s) preceding ';'
+..\..\Archive\Cab\../../Compress/LzxDecoder.h(115) : error C2039: 'NHuffman' : is not a member of 'NCompress'
+..\..\Archive\Cab\../../Compress/LzxDecoder.h(115) : error C2059: syntax error : '<'
+..\..\Archive\Cab\../../Compress/LzxDecoder.h(115) : error C2238: unexpected token(s) preceding ';'
+NMAKE : fatal error U1077: 'cl.exe' : return code '0x2'
+Stop.
+Error executing NMAKE.
+7za_vc4_ppc1.exe - 25 error(s), 0 warning(s)

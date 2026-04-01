@@ -1,4 +1,12 @@
 // Compress/HuffmanDecoder.h
+// Patched for VC++ 4.0: member function templates inside a class template
+// are not supported. DecodeSymbol<TBitDecoder> replaced with:
+//   - VC4: takes IBitDecoder* (abstract interface + per-type adapters)
+//   - VC5+: original template unchanged
+//
+// Call sites: decoder.DecodeSymbol(&stream) must become
+//             decoder.DecodeSymbol(MAKE_BIT_ADAPTER(&stream))
+// A macro MAKE_BIT_ADAPTER is provided below.
 
 #ifndef __COMPRESS_HUFFMAN_DECODER_H
 #define __COMPRESS_HUFFMAN_DECODER_H
@@ -10,16 +18,34 @@ namespace NHuffman {
 
 const int kNumTableBits = 9;
 
+#if defined(_MSC_VER) && (_MSC_VER < 1100)
+struct IBitDecoder
+{
+  virtual UInt32 GetValue(int numBits) = 0;
+  virtual void   MovePos(int numBits)  = 0;
+};
+template <class T>
+struct CBitDecoderAdapter : public IBitDecoder
+{
+  T *_p;
+  CBitDecoderAdapter(T *p) : _p(p) {}
+  UInt32 GetValue(int n) { return _p->GetValue(n); }
+  void   MovePos(int n)  { _p->MovePos(n); }
+};
+#define MAKE_BIT_ADAPTER(p) (&NCompress::NHuffman::CBitDecoderAdapter<__typeof__(*p)>(p))
+#else
+#define MAKE_BIT_ADAPTER(p) (p)
+#endif
+
 template <int kNumBitsMax, UInt32 m_NumSymbols>
 class CDecoder
 {
-  UInt32 m_Limits[kNumBitsMax + 1];     // m_Limits[i] = value limit for symbols with length = i
-  UInt32 m_Positions[kNumBitsMax + 1];  // m_Positions[i] = index in m_Symbols[] of first symbol with length = i
+  UInt32 m_Limits[kNumBitsMax + 1];
+  UInt32 m_Positions[kNumBitsMax + 1];
   UInt32 m_Symbols[m_NumSymbols];
-  Byte m_Lengths[1 << kNumTableBits];   // Table oh length for short codes.
+  Byte   m_Lengths[1 << kNumTableBits];
 
 public:
-  
   bool SetCodeLengths(const Byte *codeLengths)
   {
     int lenCounts[kNumBitsMax + 1];
@@ -31,8 +57,7 @@ public:
     for (symbol = 0; symbol < m_NumSymbols; symbol++)
     {
       int len = codeLengths[symbol];
-      if (len > kNumBitsMax)
-        return false;
+      if (len > kNumBitsMax) return false;
       lenCounts[len]++;
       m_Symbols[symbol] = 0xFFFFFFFF;
     }
@@ -44,8 +69,7 @@ public:
     for (i = 1; i <= kNumBitsMax; i++)
     {
       startPos += lenCounts[i] << (kNumBitsMax - i);
-      if (startPos > kMaxValue)
-        return false;
+      if (startPos > kMaxValue) return false;
       m_Limits[i] = (i == kNumBitsMax) ? kMaxValue : startPos;
       m_Positions[i] = m_Positions[i - 1] + lenCounts[i - 1];
       tmpPositions[i] = m_Positions[i];
@@ -65,8 +89,12 @@ public:
     return true;
   }
 
+#if defined(_MSC_VER) && (_MSC_VER < 1100)
+  UInt32 DecodeSymbol(IBitDecoder *bitStream)
+#else
   template <class TBitDecoder>
   UInt32 DecodeSymbol(TBitDecoder *bitStream)
+#endif
   {
     int numBits;
     UInt32 value = bitStream->GetValue(kNumBitsMax);
@@ -78,7 +106,6 @@ public:
     UInt32 index = m_Positions[numBits] +
       ((value - m_Limits[numBits - 1]) >> (kNumBitsMax - numBits));
     if (index >= m_NumSymbols)
-      // throw CDecoderException(); // test it
       return 0xFFFFFFFF;
     return m_Symbols[index];
   }

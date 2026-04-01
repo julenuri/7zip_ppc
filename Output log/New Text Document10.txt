@@ -1,0 +1,25 @@
+--------------------Configuration: 7za_vc4_ppc1 - Win32 (PPC) Debug--------------------
+
+
+Microsoft (R) Program Maintenance Utility   Version 1.61.6038
+Copyright (C) Microsoft Corp 1988-1996. All rights reserved.
+
+ if not exist "PPCRel" mkdir "PPCRel"
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yc"StdAfx.h" /FpPPCRel\a.pch StdAfx.cpp
+StdAfx.cpp
+Vc4Compat.h(17) : warning C4237: nonstandard extension used : 'bool' keyword is reserved for future use
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Console\ConsoleClose.cpp
+ConsoleClose.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Console\ExtractCallbackConsole.cpp
+ExtractCallbackConsole.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Console\List.cpp
+List.cpp
+..\..\..\Common/MyVector.h(213) : error C2678: binary '==' : no operator defined which takes a left-hand operand of type 'const struct CArcExtInfo' (or there is no acceptable conversion) (new behavior; please see help)
+..\..\..\Common/MyVector.h(224) : error C2678: binary '==' : no operator defined which takes a left-hand operand of type 'const struct CArcExtInfo' (or there is no acceptable conversion) (new behavior; please see help)
+..\..\..\Common/MyVector.h(226) : error C2678: binary '<' : no operator defined which takes a left-hand operand of type 'const struct CArcExtInfo' (or there is no acceptable conversion) (new behavior; please see help)
+..\..\..\Common/MyVector.h(240) : error C2678: binary '==' : no operator defined which takes a left-hand operand of type 'const struct CArcExtInfo' (or there is no acceptable conversion) (new behavior; please see help)
+..\..\..\Common/MyVector.h(245) : error C2678: binary '<' : no operator defined which takes a left-hand operand of type 'const struct CArcExtInfo' (or there is no acceptable conversion) (new behavior; please see help)
+NMAKE : fatal error U1077: 'cl.exe' : return code '0x2'
+Stop.
+Error executing NMAKE.
+7za_vc4_ppc1.exe - 6 error(s), 1 warning(s)

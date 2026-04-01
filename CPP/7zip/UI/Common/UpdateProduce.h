@@ -19,6 +19,9 @@ struct CUpdatePair2
   bool ExistInArchive() const { return ArcIndex != -1; }
 
   CUpdatePair2(): IsAnti(false), DirIndex(-1), ArcIndex(-1), NewNameIndex(-1) {}
+  // Dummy operators for VC4 eager template instantiation
+  bool operator==(const CUpdatePair2 &) const { return false; }
+  bool operator<(const CUpdatePair2 &)  const { return false; }
 };
 
 struct IUpdateProduceCallback

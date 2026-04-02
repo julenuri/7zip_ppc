@@ -110,6 +110,22 @@ int MyStringCompareNoCase(const char *s1, const char *s2);
 #endif
 
 // -----------------------------------------------------------------
+// 7. ObjVecFindLinear: reemplazo de CObjectVector::FindInSorted
+//    para VC4, donde ese metodo esta desactivado por el guard.
+//    Hace busqueda lineal (suficiente para los vectores pequenos
+//    de rutas de archivos donde se usa en List.cpp y Extract.cpp).
+// -----------------------------------------------------------------
+#if defined(__cplusplus) && defined(_MSC_VER) && (_MSC_VER < 1100)
+template <class V, class T>
+inline int ObjVecFindLinear(const V& vec, const T& item)
+{
+  for (int i = 0; i < vec.Size(); i++)
+    if (vec[i] == item) return i;
+  return -1;
+}
+#endif
+
+// -----------------------------------------------------------------
 // 6. Silenciar warnings de VC4 que son ruido en este port
 // -----------------------------------------------------------------
 // C4237: 'bool' keyword is reserved for future use

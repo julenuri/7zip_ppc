@@ -474,7 +474,7 @@ HRESULT ListArchives(CCodecs *codecs, const CIntVector &formatIndices,
 
     for (int v = 0; v < archiveLink.VolumePaths.Size(); v++)
     {
-      int index = archivePathsFull.FindInSorted(archiveLink.VolumePaths[v]);
+      int index = ObjVecFindLinear(archivePathsFull, archiveLink.VolumePaths[v]);
       if (index >= 0 && index > i)
       {
         archivePaths.Delete(index);

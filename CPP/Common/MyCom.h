@@ -29,7 +29,14 @@ public:
   void Release() { if (_p) { _p->Release(); _p = NULL; } }
   operator T*() const {  return (T*)_p;  }
   // T& operator*() const {  return *_p; }
+  // VC4: CMyComPtr::QueryInterface takes void** (member templates not supported).
+  // All COM functions that receive &someComPtr expect void** anyway, so returning
+  // void** here is correct and avoids casts at every call site.
+#if defined(_MSC_VER) && (_MSC_VER < 1100)
+  void** operator&() { return (void**)&_p; }
+#else
   T** operator&() { return &_p; }
+#endif
   T* operator->() const { return _p; }
   T* operator=(T* p)
   {

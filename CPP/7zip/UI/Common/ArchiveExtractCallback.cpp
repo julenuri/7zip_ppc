@@ -46,7 +46,7 @@ void CArchiveExtractCallback::Init(
 
   _extractCallback2 = extractCallback2;
   _compressProgress.Release();
-  _extractCallback2.QueryInterface(IID_ICompressProgressInfo, &_compressProgress);
+  _extractCallback2.QueryInterface(IID_ICompressProgressInfo, (void**)&_compressProgress);
 
   LocalProgressSpec->Init(extractCallback2, true);
   LocalProgressSpec->SendProgress = false;
@@ -374,7 +374,8 @@ STDMETHODIMP CArchiveExtractCallback::GetStream(UInt32 index, ISequentialOutStre
       {
         // if (::GetLastError() != ERROR_FILE_EXISTS || !isSplit)
         {
-          UString message = L"can not open output file " + fullProcessedPath;
+          UString message = L"can not open output file ";
+		  UString message += fullProcessedPath;
           RINOK(_extractCallback2->MessageError(message));
           return S_OK;
         }

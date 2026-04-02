@@ -1,0 +1,16 @@
+--------------------Configuration: 7za_vc4_ppc1 - Win32 (PPC) Debug--------------------
+
+
+Microsoft (R) Program Maintenance Utility   Version 1.61.6038
+Copyright (C) Microsoft Corp 1988-1996. All rights reserved.
+
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\ArchiveCommandLine.cpp
+ArchiveCommandLine.cpp
+..\..\UI\Common\ArchiveCommandLine.cpp(487) : error C2047: illegal default
+..\..\UI\Common\ArchiveCommandLine.cpp(487) : error C2039: 'NPairAcion' : is not a member of 'NUpdateArchive'
+..\..\UI\Common\ArchiveCommandLine.cpp(487) : error C2065: 'kIgnore' : undeclared identifier
+..\..\UI\Common\ArchiveCommandLine.cpp(487) : error C2446: 'return' : no conversion from 'int' to 'enum NUpdateArchive::NPairAction::EEnum' (new behavior; please see help)
+NMAKE : fatal error U1077: 'cl.exe' : return code '0x2'
+Stop.
+Error executing NMAKE.
+7za_vc4_ppc1.exe - 5 error(s), 0 warning(s)

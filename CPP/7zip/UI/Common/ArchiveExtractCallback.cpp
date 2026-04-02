@@ -46,7 +46,7 @@ void CArchiveExtractCallback::Init(
 
   _extractCallback2 = extractCallback2;
   _compressProgress.Release();
-  _extractCallback2.QueryInterface(IID_ICompressProgressInfo, (void**)&_compressProgress);
+  _extractCallback2.QueryInterface(IID_ICompressProgressInfo, &_compressProgress);
 
   LocalProgressSpec->Init(extractCallback2, true);
   LocalProgressSpec->SendProgress = false;

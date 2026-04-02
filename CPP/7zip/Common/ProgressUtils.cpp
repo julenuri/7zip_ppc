@@ -14,7 +14,7 @@ void CLocalProgress::Init(IProgress *progress, bool inSizeIsMain)
 {
   _ratioProgress.Release();
   _progress = progress;
-  _progress.QueryInterface(IID_ICompressProgressInfo, &_ratioProgress);
+  _progress.QueryInterface(IID_ICompressProgressInfo, (void**)&_ratioProgress);
   _inSizeIsMain = inSizeIsMain;
 }
 

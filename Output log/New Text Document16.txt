@@ -1,0 +1,28 @@
+--------------------Configuration: 7za_vc4_ppc1 - Win32 (PPC) Debug--------------------
+
+
+Microsoft (R) Program Maintenance Utility   Version 1.61.6038
+Copyright (C) Microsoft Corp 1988-1996. All rights reserved.
+
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\ProgressUtils.cpp
+ProgressUtils.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\StreamBinder.cpp
+StreamBinder.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\StreamObjects.cpp
+StreamObjects.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\StreamUtils.cpp
+StreamUtils.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\Common\VirtThread.cpp
+VirtThread.cpp
+ cl.exe /nologo /W3 /GX /O1 /c /FoPPCRel\  /I "..\..\..\\"  /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS"  /D "COMPRESS_MT" /D "COMPRESS_BZIP2_MT" /D "COMPRESS_MF_MT"  /D "BREAK_HANDLER" /D "BENCH_MT" /Yu"StdAfx.h" /FpPPCRel\a.pch ..\..\UI\Common\ArchiveCommandLine.cpp
+ArchiveCommandLine.cpp
+..\..\..\Windows/FileMapping.h(17) : error C2061: syntax error : identifier 'UINT64'
+..\..\..\Windows/FileMapping.h(30) : error C2061: syntax error : identifier 'UINT64'
+..\..\..\Windows/FileMapping.h(37) : error C2061: syntax error : identifier 'UINT64'
+..\..\UI\Common\ArchiveCommandLine.cpp(329) : error C2660: 'MapViewOfFile' : function does not take 3 parameters
+..\..\UI\Common\ArchiveCommandLine.cpp(483) : error C2202: 'GetUpdatePairActionType' : not all control paths return a value
+..\..\UI\Common\ArchiveCommandLine.cpp(724) : error C2065: 'CP_UTF8' : undeclared identifier
+NMAKE : fatal error U1077: 'cl.exe' : return code '0x2'
+Stop.
+Error executing NMAKE.
+7za_vc4_ppc1.exe - 7 error(s), 0 warning(s)

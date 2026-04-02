@@ -87,8 +87,8 @@ public:
   }
 
   // FindInSorted and AddToUniqueSorted require operator== and operator<.
-  // VC4 instantiates all methods eagerly, so guard them.
-#if !defined(_MSC_VER) || (_MSC_VER >= 1100)
+  // All types used with CRecordVector (int, UInt32, etc.) have these
+  // operators natively, so no guard needed.
   int FindInSorted(const T& item) const
   {
     int left = 0, right = Size();
@@ -123,7 +123,6 @@ public:
     Insert(right, item);
     return right;
   }
-#endif
 
   static void SortRefDown(T* p, int k, int size, int (*compare)(const T*, const T*, void *), void *param)
   {
@@ -208,11 +207,6 @@ public:
     CPointerVector::Delete(index, num);
   }
 
-  // Find, FindInSorted and AddToSorted require operator== and operator<.
-  // VC4 instantiates all template methods eagerly even if never called,
-  // so on types without those operators it fails to compile.
-  // We guard these methods: they will only be compiled on VC5+.
-#if !defined(_MSC_VER) || (_MSC_VER >= 1100)
   int Find(const T& item) const
   {
     for (int i = 0; i < Size(); i++)
@@ -256,18 +250,13 @@ public:
     Insert(right, item);
     return right;
   }
-#endif
 
   void Sort(int (*compare)(void *const *, void *const *, void *), void *param)
     { CPointerVector::Sort(compare, param); }
 
-  // CompareObjectItems and the no-arg Sort() require MyCompare<T> which
-  // needs operator< and operator==. Guard for VC4 like Find/FindInSorted.
-#if !defined(_MSC_VER) || (_MSC_VER >= 1100)
   static int CompareObjectItems(void *const *a1, void *const *a2, void * /* param */)
     { return MyCompare(*(*((const T **)a1)), *(*((const T **)a2))); }
   void Sort() { CPointerVector::Sort(CompareObjectItems, 0); }
-#endif
 };
 
 #endif

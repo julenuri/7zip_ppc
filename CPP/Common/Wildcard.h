@@ -1,4 +1,10 @@
 // Common/Wildcard.h
+// Patched for VC++ 4.0: VC4 eagerly instantiates ALL methods of a class
+// template for every type used, even if those methods are never called.
+// CObjectVector<CCensorNode>, CObjectVector<CItem> and CObjectVector<CPair>
+// trigger instantiation of FindInSorted/AddToSorted which need operator==
+// and operator<. Those operators are never actually called on these types,
+// so we add dummy implementations that simply assert/return a safe value.
 
 #ifndef __COMMON_WILDCARD_H
 #define __COMMON_WILDCARD_H
@@ -23,6 +29,12 @@ struct CItem
   bool ForFile;
   bool ForDir;
   bool CheckPath(const UStringVector &pathParts, bool isFile) const;
+
+  // Dummy operators required by VC4 eager template instantiation.
+  // CObjectVector<CItem> triggers FindInSorted/AddToSorted compilation
+  // even though those methods are never actually called on CItem.
+  bool operator==(const CItem &) const { return false; }
+  bool operator<(const CItem &)  const { return false; }
 };
 
 class CCensorNode
@@ -54,6 +66,10 @@ public:
   bool CheckPathToRoot(bool include, UStringVector &pathParts, bool isFile) const;
   // bool CheckPathToRoot(const UString &path, bool isFile, bool include) const;
   void ExtendExclude(const CCensorNode &fromNodes);
+
+  // Dummy operators required by VC4 eager template instantiation.
+  bool operator==(const CCensorNode &) const { return false; }
+  bool operator<(const CCensorNode &)  const { return false; }
 };
 
 struct CPair
@@ -61,6 +77,10 @@ struct CPair
   UString Prefix;
   CCensorNode Head;
   CPair(const UString &prefix): Prefix(prefix) { };
+
+  // Dummy operators required by VC4 eager template instantiation.
+  bool operator==(const CPair &) const { return false; }
+  bool operator<(const CPair &)  const { return false; }
 };
 
 class CCensor

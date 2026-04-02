@@ -13,6 +13,9 @@ typedef unsigned __int64 UINT64;
 #ifndef INT64
 typedef __int64 INT64;
 #endif
+#ifndef SIZE_T
+typedef unsigned int SIZE_T;
+#endif
 
 namespace NWindows {
 // namespace NFile {

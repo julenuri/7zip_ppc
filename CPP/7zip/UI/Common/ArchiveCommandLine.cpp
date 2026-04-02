@@ -26,6 +26,10 @@
 
 extern bool g_CaseSensitive;
 
+#ifndef CP_UTF8
+#define CP_UTF8 65001
+#endif
+
 #if _MSC_VER >= 1400
 #define MY_isatty_fileno(x) _isatty(_fileno(x))
 #else
@@ -478,8 +482,8 @@ static NUpdateArchive::NPairAction::EEnum GetUpdatePairActionType(int i)
     case NUpdateArchive::NPairAction::kCopy: return NUpdateArchive::NPairAction::kCopy;
     case NUpdateArchive::NPairAction::kCompress: return NUpdateArchive::NPairAction::kCompress;
     case NUpdateArchive::NPairAction::kCompressAsAnti: return NUpdateArchive::NPairAction::kCompressAsAnti;
+    default: return NUpdateArchive::NPairAction::kIgnore; // Valor por defecto
   }
-  throw 98111603;
 }
 
 const UString kUpdatePairStateIDSet = L"PQRXYZW";

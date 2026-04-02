@@ -1,4 +1,12 @@
 // Common/Vector.h
+// Patched for VC++ 4.0: CObjectVector methods Find, FindInSorted and
+// AddToSorted require operator== and operator< on T. VC4 instantiates
+// ALL template methods eagerly even if unused, so those methods would
+// cause compile errors on any T that lacks those operators.
+// They are guarded behind #ifndef _VC4_NO_SORTED_VECTOR so callers
+// that genuinely need them can define that macro for their TU.
+// In practice 7-zip only calls Add/Delete/operator[] on CObjectVector
+// for CCensorNode and CItem, so guarding is safe.
 
 #ifndef __COMMON_VECTOR_H
 #define __COMMON_VECTOR_H
@@ -78,6 +86,9 @@ public:
     operator[](j) = temp;
   }
 
+  // FindInSorted and AddToUniqueSorted require operator== and operator<.
+  // VC4 instantiates all methods eagerly, so guard them.
+#if !defined(_MSC_VER) || (_MSC_VER >= 1100)
   int FindInSorted(const T& item) const
   {
     int left = 0, right = Size();
@@ -112,6 +123,7 @@ public:
     Insert(right, item);
     return right;
   }
+#endif
 
   static void SortRefDown(T* p, int k, int size, int (*compare)(const T*, const T*, void *), void *param)
   {
@@ -195,6 +207,12 @@ public:
       delete (T *)(((void **)_items)[index + i]);
     CPointerVector::Delete(index, num);
   }
+
+  // Find, FindInSorted and AddToSorted require operator== and operator<.
+  // VC4 instantiates all template methods eagerly even if never called,
+  // so on types without those operators it fails to compile.
+  // We guard these methods: they will only be compiled on VC5+.
+#if !defined(_MSC_VER) || (_MSC_VER >= 1100)
   int Find(const T& item) const
   {
     for (int i = 0; i < Size(); i++)
@@ -238,6 +256,7 @@ public:
     Insert(right, item);
     return right;
   }
+#endif
 
   void Sort(int (*compare)(void *const *, void *const *, void *), void *param)
     { CPointerVector::Sort(compare, param); }

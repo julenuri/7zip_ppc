@@ -65,6 +65,7 @@ CPropVariant& CPropVariant::operator=(LPCOLESTR lpszSrc)
 }
 
 
+#if !defined(_MSC_VER) || (_MSC_VER >= 1100)
 CPropVariant& CPropVariant::operator=(bool bSrc)
 {
   if (vt != VT_BOOL)
@@ -75,6 +76,7 @@ CPropVariant& CPropVariant::operator=(bool bSrc)
   boolVal = bSrc ? VARIANT_TRUE : VARIANT_FALSE;
   return *this;
 }
+#endif
 
 CPropVariant& CPropVariant::operator=(UInt32 value)
 {

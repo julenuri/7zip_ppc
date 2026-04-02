@@ -1,4 +1,7 @@
 // MyCom.h
+// Patched for VC++ 4.0: member function templates inside a class template
+// are not supported (_MSC_VER < 1100). QueryInterface<Q> replaced with
+// a plain void** overload that callers can use identically.
 
 #ifndef __MYCOM_H
 #define __MYCOM_H
@@ -58,21 +61,16 @@ public:
     return ::CoCreateInstance(rclsid, pUnkOuter, dwClsContext, iid, (void**)&_p);
   }
   #endif
-  /*
-  HRESULT CoCreateInstance(LPCOLESTR szProgID, LPUNKNOWN pUnkOuter = NULL, DWORD dwClsContext = CLSCTX_ALL)
+
+  // VC++ 4.0 does not support member function templates inside a class
+  // template. The original:
+  //   template <class Q>
+  //   HRESULT QueryInterface(REFGUID iid, Q** pp) const { ... }
+  // is replaced with a plain void** overload. All call sites in 7-zip
+  // pass a pointer-to-interface-pointer, so the cast is safe.
+  HRESULT QueryInterface(REFGUID iid, void** pp) const
   {
-    CLSID clsid;
-    HRESULT hr = CLSIDFromProgID(szProgID, &clsid);
-    ATLASSERT(_p == NULL);
-    if (SUCCEEDED(hr))
-      hr = ::CoCreateInstance(clsid, pUnkOuter, dwClsContext, __uuidof(T), (void**)&_p);
-    return hr;
-  }
-  */
-  template <class Q>
-  HRESULT QueryInterface(REFGUID iid, Q** pp) const
-  {
-    return _p->QueryInterface(iid, (void**)pp);
+    return _p->QueryInterface(iid, pp);
   }
 };
 

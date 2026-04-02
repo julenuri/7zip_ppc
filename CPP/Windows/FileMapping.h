@@ -6,17 +6,6 @@
 #include "Windows/Handle.h"
 #include "Windows/Defs.h"
 
-// Compatibilidad con VC++ 4.0
-#ifndef UINT64
-typedef unsigned __int64 UINT64;
-#endif
-#ifndef INT64
-typedef __int64 INT64;
-#endif
-#ifndef SIZE_T
-typedef unsigned int SIZE_T;
-#endif
-
 namespace NWindows {
 // namespace NFile {
 // namespace NMapping {

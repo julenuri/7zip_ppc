@@ -24,18 +24,31 @@ typedef int bool;
 #endif
 
 // -----------------------------------------------------------------
-// 2. UINT_PTR / UINT32
-//    El SDK de NT4 no define UINT_PTR (se anadio en el SDK de XP).
+// 2. UINT_PTR / UINT32 / UINT64 / INT64 / SIZE_T
+//    El SDK de NT4 no define UINT_PTR (se añadio en el SDK de XP).
 //    En PPC NT4 los punteros son de 32 bits.
 //    UINT32 tampoco lo define windows.h de NT4; lo usan FileFind.h
 //    y FileDir.h del arbol de 7-zip.
 // -----------------------------------------------------------------
+
+#ifndef INT64
+typedef __int64 INT64;
+#endif
+
+#ifndef SIZE_T
+typedef unsigned int SIZE_T;
+#endif
+
 #ifndef UINT_PTR
 typedef unsigned int UINT_PTR;
 #endif
 
 #ifndef UINT32
 typedef unsigned int UINT32;
+#endif
+
+#ifndef UINT64
+typedef unsigned __int64 UINT64;
 #endif
 
 // -----------------------------------------------------------------
@@ -58,8 +71,19 @@ typedef unsigned int UINT32;
 #define FILE_ATTRIBUTE_SPARSE_FILE  0x0200
 #endif
 
+// ----------------------------------------------------------------
+// 4. CP_UTF8 no está definido en MSVC++ 4.0/NT4.0.
+//    Definimos la constante a la cuál se refiere.
+//    Se introduce en el SDK de Windows 2000, por lo que la misma
+//    no funcionaría en principio en Windows 98, no sé cómo haría
+//    Igor P. para el workaround , o si se retrocompilaba.
+
+#ifndef CP_UTF8
+#define CP_UTF8 65001
+#endif
+
 // -----------------------------------------------------------------
-// 4. PROPVARIANT
+// 5. PROPVARIANT
 //    En builds _WIN32 PROPVARIANT viene de <propidl.h>, pero el
 //    windows.h del SDK de NT4 no lo incluye automaticamente.
 //    Lo incluimos explicitamente aqui.
@@ -99,7 +123,7 @@ typedef struct tagPROPVARIANT
 #endif
 
 // -----------------------------------------------------------------
-// 5. MyStringCompareNoCase(char) - declaracion que falta en MyString.h
+// 7. MyStringCompareNoCase(char) - declaracion que falta en MyString.h
 //    MyString.h solo declara la version wchar_t (la de char esta
 //    comentada). La implementacion si existe en MyString.cpp.
 //    Al declarar aqui el overload, CStringBase<char>::CompareNoCase
@@ -110,7 +134,7 @@ int MyStringCompareNoCase(const char *s1, const char *s2);
 #endif
 
 // -----------------------------------------------------------------
-// 7. ObjVecFindLinear: reemplazo de CObjectVector::FindInSorted
+// 8. ObjVecFindLinear: reemplazo de CObjectVector::FindInSorted
 //    para VC4, donde ese metodo esta desactivado por el guard.
 //    Hace busqueda lineal (suficiente para los vectores pequenos
 //    de rutas de archivos donde se usa en List.cpp y Extract.cpp).
@@ -126,7 +150,7 @@ inline int ObjVecFindLinear(const V& vec, const T& item)
 #endif
 
 // -----------------------------------------------------------------
-// 6. Silenciar warnings de VC4 que son ruido en este port
+// 9. Silenciar warnings de VC4 que son ruido en este port
 // -----------------------------------------------------------------
 // C4237: 'bool' keyword is reserved for future use
 #pragma warning(disable: 4237)

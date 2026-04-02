@@ -261,9 +261,13 @@ public:
   void Sort(int (*compare)(void *const *, void *const *, void *), void *param)
     { CPointerVector::Sort(compare, param); }
 
+  // CompareObjectItems and the no-arg Sort() require MyCompare<T> which
+  // needs operator< and operator==. Guard for VC4 like Find/FindInSorted.
+#if !defined(_MSC_VER) || (_MSC_VER >= 1100)
   static int CompareObjectItems(void *const *a1, void *const *a2, void * /* param */)
     { return MyCompare(*(*((const T **)a1)), *(*((const T **)a2))); }
   void Sort() { CPointerVector::Sort(CompareObjectItems, 0); }
+#endif
 };
 
 #endif

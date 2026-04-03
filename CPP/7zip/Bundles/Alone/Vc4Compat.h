@@ -183,30 +183,6 @@ inline int ObjVecFindLinear(const V& vec, const T& item)
 #endif
 
 // -----------------------------------------------------------------
-// 10. Importar el CBind 
-//
-struct CBind
-{
-    // Campos existentes...
-    UInt32 InIndex;
-    UInt32 OutIndex;
-
-    // Añade estos operadores:
-    bool operator==(const CBind& other) const
-    {
-        // Compara los campos relevantes
-        return (InIndex == other.InIndex && OutIndex == other.OutIndex);
-    }
-
-    bool operator<(const CBind& other) const
-    {
-        // Implementa comparación
-        if (InIndex != other.InIndex)
-            return InIndex < other.InIndex;
-        return OutIndex < other.OutIndex;
-    }
-};
-// -----------------------------------------------------------------
 // 11. Silenciar warnings de VC4 que son ruido en este port
 // -----------------------------------------------------------------
 // C4237: 'bool' keyword is reserved for future use

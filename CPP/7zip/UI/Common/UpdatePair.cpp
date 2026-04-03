@@ -36,6 +36,7 @@ static int MyCompareTime(NFileTimeType::EEnum fileTimeType, const FILETIME &time
       }
   }
   throw 4191618;
+  return 0;
 }
 
 static const wchar_t *kDuplicateFileNameMessage = L"Duplicate filename:";

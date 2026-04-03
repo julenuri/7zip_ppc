@@ -30,7 +30,10 @@ struct CBindPair
 {
   CNum InIndex;
   CNum OutIndex;
+  bool operator==(const CBindPair &) const { return false; }
+  bool operator<(const CBindPair &)  const { return false; }
 };
+
 
 struct CFolder
 {

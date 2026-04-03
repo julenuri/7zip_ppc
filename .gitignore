@@ -1,0 +1,6 @@
+# Ignorar carpetas
+\.vs\
+
+# Ignorar archivos específicos
+.env
+.DS_Store

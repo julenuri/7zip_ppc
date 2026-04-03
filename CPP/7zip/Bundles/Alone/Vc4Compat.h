@@ -183,7 +183,7 @@ inline int ObjVecFindLinear(const V& vec, const T& item)
 #endif
 
 // -----------------------------------------------------------------
-// 10
+// 10. Importar el CBind 
 //
 struct CBind
 {

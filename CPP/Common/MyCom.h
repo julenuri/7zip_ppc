@@ -29,11 +29,19 @@ public:
   void Release() { if (_p) { _p->Release(); _p = NULL; } }
   operator T*() const {  return (T*)_p;  }
   // T& operator*() const {  return *_p; }
-  // VC4: CMyComPtr::QueryInterface takes void** (member templates not supported).
-  // All COM functions that receive &someComPtr expect void** anyway, so returning
-  // void** here is correct and avoids casts at every call site.
+  // VC4 does not support member function templates, so our QueryInterface
+  // takes void** instead of Q**. But other COM functions (GetStream, etc.)
+  // still need T**. We use a proxy struct that converts to both, letting
+  // the compiler pick the right type based on the call site context.
 #if defined(_MSC_VER) && (_MSC_VER < 1100)
-  void** operator&() { return (void**)&_p; }
+  struct CPtrRef
+  {
+    T** _pp;
+    CPtrRef(T** pp) : _pp(pp) {}
+    operator T**()   const { return _pp; }
+    operator void**() const { return (void**)_pp; }
+  };
+  CPtrRef operator&() { return CPtrRef(&_p); }
 #else
   T** operator&() { return &_p; }
 #endif

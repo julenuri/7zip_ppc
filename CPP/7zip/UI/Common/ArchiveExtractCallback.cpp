@@ -374,8 +374,7 @@ STDMETHODIMP CArchiveExtractCallback::GetStream(UInt32 index, ISequentialOutStre
       {
         // if (::GetLastError() != ERROR_FILE_EXISTS || !isSplit)
         {
-          UString message = L"can not open output file ";
-		  UString message += fullProcessedPath;
+          UString message = UString(L"can not open output file ") + fullProcessedPath;
           RINOK(_extractCallback2->MessageError(message));
           return S_OK;
         }

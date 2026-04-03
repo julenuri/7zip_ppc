@@ -479,8 +479,8 @@ static NUpdateArchive::NPairAction::EEnum GetUpdatePairActionType(int i)
     case NUpdateArchive::NPairAction::kCompress: return NUpdateArchive::NPairAction::kCompress;
     case NUpdateArchive::NPairAction::kCompressAsAnti: return NUpdateArchive::NPairAction::kCompressAsAnti;
   }
-  default: //No estoy nada convencido con este parche, que elimina el "throw 98111603;". Para nada.
-    return (NUpdateArchive::NPairAction::EEnum)0; //Le acabamos de dar un valor por defecto tras el fallo.
+  //No estoy nada convencido con este parche, que elimina el "throw 98111603;". Para nada.
+  return (NUpdateArchive::NPairAction::EEnum)0; //Le acabamos de dar un valor por defecto tras el fallo.
 }
 
 const UString kUpdatePairStateIDSet = L"PQRXYZW";

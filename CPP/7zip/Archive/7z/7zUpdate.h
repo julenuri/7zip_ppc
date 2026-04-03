@@ -67,8 +67,6 @@ struct CUpdateOptions
   bool SolidExtension;
   bool RemoveSfxBlock;
   bool VolumeMode;
-  bool operator==(const CNode &) const { return false; }
-  bool operator<(const CNode &)  const { return false; }
 };
 
 HRESULT Update(

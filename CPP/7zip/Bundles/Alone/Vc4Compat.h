@@ -56,7 +56,31 @@ typedef unsigned long ULONG_PTR;
 #endif
 
 // -----------------------------------------------------------------
-// 3. FILE_ATTRIBUTE_ENCRYPTED
+// 3. PROPVARIANT
+//    En builds _WIN32 PROPVARIANT viene de <propidl.h>, pero el
+//    windows.h del SDK de NT4 no lo incluye automaticamente.
+//    Lo incluimos explicitamente aqui.
+// -----------------------------------------------------------------
+#ifdef _WIN32
+// En el SDK de NT4, PROPVARIANT viene incluido a traves de ole2.h.
+// propidl.h no existe como fichero separado en este SDK.
+#include <ole2.h>
+#endif
+ 
+// -----------------------------------------------------------------
+// 3b. PROPID / VARTYPE - tipos usados en STATPROPSTG.
+//     Deben estar disponibles antes de la definicion de STATPROPSTG.
+//     ole2.h de NT4 puede no definirlos si no incluye propidl.h.
+// -----------------------------------------------------------------
+#ifndef PROPID
+typedef unsigned long PROPID;
+#endif
+#ifndef VARTYPE
+typedef unsigned short VARTYPE;
+#endif
+
+// -----------------------------------------------------------------
+// 4. FILE_ATTRIBUTE_ENCRYPTED
 //    Constante anadida en el SDK de Windows 2000.
 //    La definimos con su valor canonico (0x4000) para que el codigo
 //    compile; en NT4 ningun fichero tendra este atributo activo,
@@ -75,30 +99,24 @@ typedef unsigned long ULONG_PTR;
 #define FILE_ATTRIBUTE_SPARSE_FILE  0x0200
 #endif
 
-// ----------------------------------------------------------------
-// 4. CP_UTF8 no está definido en MSVC++ 4.0/NT4.0.
-//    Definimos la constante a la cuál se refiere.
-//    Se introduce en el SDK de Windows 2000, por lo que la misma
-//    no funcionaría en principio en Windows 98, no sé cómo haría
-//    Igor P. para el workaround , o si se retrocompilaba.
-
-#ifndef CP_UTF8
-#define CP_UTF8 65001
+// -----------------------------------------------------------------
+// 5. STATPROPSTG: struct de OLE2/COM para describir propiedades.
+// En el SDK de NT4 PPC puede no estar en ole2.h (se añadio formalmente
+// en el SDK de IE4/NT4 SP3 con propidl.h). La definimos manualmente
+// con guard para evitar redefinicion si ya existe.
+#if defined(_WIN32) && !defined(_STATPROPSTG_DEFINED)
+#ifndef STATPROPSTG
+typedef struct tagSTATPROPSTG {
+    LPWSTR lpwstrName;
+    PROPID propid;
+    VARTYPE vt;
+} STATPROPSTG;
+#define _STATPROPSTG_DEFINED
+#endif
 #endif
 
 // -----------------------------------------------------------------
-// 5. PROPVARIANT
-//    En builds _WIN32 PROPVARIANT viene de <propidl.h>, pero el
-//    windows.h del SDK de NT4 no lo incluye automaticamente.
-//    Lo incluimos explicitamente aqui.
-// -----------------------------------------------------------------
-#ifdef _WIN32
-// En el SDK de NT4, PROPVARIANT viene incluido a traves de ole2.h.
-// propidl.h no existe como fichero separado en este SDK.
-#include <ole2.h>
-#endif
-
-// Si ole2.h del SDK de NT4 PPC no define PROPVARIANT (poco probable
+// 6. Si ole2.h del SDK de NT4 PPC no define PROPVARIANT (poco probable
 // pero posible), lo definimos manualmente como en MyWindows.h.
 #if defined(_WIN32) && !defined(_PROPVARIANT_DEFINED) && !defined(tagPROPVARIANT)
 typedef unsigned short VARTYPE;
@@ -126,8 +144,19 @@ typedef struct tagPROPVARIANT
 #define _PROPVARIANT_DEFINED
 #endif
 
+// ----------------------------------------------------------------
+// 7. CP_UTF8 no está definido en MSVC++ 4.0/NT4.0.
+//    Definimos la constante a la cuál se refiere.
+//    Se introduce en el SDK de Windows 2000, por lo que la misma
+//    no funcionaría en principio en Windows 98, no sé cómo haría
+//    Igor P. para el workaround , o si se retrocompilaba.
+
+#ifndef CP_UTF8
+#define CP_UTF8 65001
+#endif
+
 // -----------------------------------------------------------------
-// 7. MyStringCompareNoCase(char) - declaracion que falta en MyString.h
+// 8. MyStringCompareNoCase(char) - declaracion que falta en MyString.h
 //    MyString.h solo declara la version wchar_t (la de char esta
 //    comentada). La implementacion si existe en MyString.cpp.
 //    Al declarar aqui el overload, CStringBase<char>::CompareNoCase
@@ -138,7 +167,7 @@ int MyStringCompareNoCase(const char *s1, const char *s2);
 #endif
 
 // -----------------------------------------------------------------
-// 8. ObjVecFindLinear: reemplazo de CObjectVector::FindInSorted
+// 9. ObjVecFindLinear: reemplazo de CObjectVector::FindInSorted
 //    para VC4, donde ese metodo esta desactivado por el guard.
 //    Hace busqueda lineal (suficiente para los vectores pequenos
 //    de rutas de archivos donde se usa en List.cpp y Extract.cpp).
@@ -154,7 +183,7 @@ inline int ObjVecFindLinear(const V& vec, const T& item)
 #endif
 
 // -----------------------------------------------------------------
-// 9. Silenciar warnings de VC4 que son ruido en este port
+// 10. Silenciar warnings de VC4 que son ruido en este port
 // -----------------------------------------------------------------
 // C4237: 'bool' keyword is reserved for future use
 #pragma warning(disable: 4237)

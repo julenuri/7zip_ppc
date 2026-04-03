@@ -53,7 +53,10 @@ struct CFolder
     for (int i = UnpackSizes.Size() - 1; i >= 0; i--)
       if (FindBindPairForOutStream(i) < 0)
         return UnpackSizes[i];
-    throw 1;
+      // Valor por defecto si no se encuentra ningún stream sin binding
+    if (UnpackSizes.Size() > 0)
+        return UnpackSizes[0];
+    return 0;
   }
 
   CNum GetNumOutStreams() const

@@ -20,6 +20,11 @@ public:
   // typedef T _PtrClass;
   CMyComPtr() { _p = NULL;}
   CMyComPtr(T* p) {if ((_p = p) != NULL) p->AddRef(); }
+  // VC4: NULL is (int)0. Without this constructor, Add(NULL) on
+  // CObjectVector<CMyComPtr<T>> fails because int cannot convert to T*.
+#if defined(_MSC_VER) && (_MSC_VER < 1100)
+  CMyComPtr(int null) { _p = NULL; }
+#endif
   CMyComPtr(const CMyComPtr<T>& lp)
   {
     if ((_p = lp._p) != NULL)

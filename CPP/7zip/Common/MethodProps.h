@@ -19,7 +19,10 @@ struct CMethod
 {
   CMethodId Id;
   CObjectVector<CProp> Props;
+  bool operator==(const CMethod &) const { return false; }
+  bool operator<(const CMethod &)  const { return false; }
 };
+
 
 struct CMethodsMode
 {

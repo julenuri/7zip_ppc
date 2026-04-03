@@ -1,5 +1,6 @@
 # Ignorar carpetas
-\.vs\
+.vs/
+CPP/7zip/Bundles/Alone/PPCRel
 
 # Ignorar archivos específicos
 .env

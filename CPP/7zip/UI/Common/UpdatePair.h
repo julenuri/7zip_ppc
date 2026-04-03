@@ -14,6 +14,9 @@ struct CUpdatePair
   int ArcIndex;
   int DirIndex;
   CUpdatePair(): ArcIndex(-1), DirIndex(-1) {}
+  // Operadores Dummy para VC4 siguiendo plantilla de creación de instancias
+  bool operator==(const CUpdatePair &) const { return false; }
+  bool operator<(const CUpdatePair &)  const { return false; }
 };
 
 void GetUpdatePairInfoList(

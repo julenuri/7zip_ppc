@@ -24,7 +24,7 @@ typedef int bool;
 #endif
 
 // -----------------------------------------------------------------
-// 2. UINT_PTR / UINT32 / UINT64 / INT64 / SIZE_T
+// 2. UINT_PTR / UINT32 / UINT64 / ULONG_PTR / INT64 / SIZE_T
 //    El SDK de NT4 no define UINT_PTR (se añadio en el SDK de XP).
 //    En PPC NT4 los punteros son de 32 bits.
 //    UINT32 tampoco lo define windows.h de NT4; lo usan FileFind.h
@@ -49,6 +49,10 @@ typedef unsigned int UINT32;
 
 #ifndef UINT64
 typedef unsigned __int64 UINT64;
+#endif
+
+#ifndef ULONG_PTR
+typedef unsigned long ULONG_PTR;
 #endif
 
 // -----------------------------------------------------------------

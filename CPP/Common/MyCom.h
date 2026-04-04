@@ -176,10 +176,10 @@ public:
 #define MY_QUERYINTERFACE_BEGIN STDMETHOD(QueryInterface) \
     (REFGUID iid, void **outObject) {
 
-#define MY_QUERYINTERFACE_ENTRY(i) if (iid == IID_ ## i) \
+#define MY_QUERYINTERFACE_ENTRY(i) if (IS_GUID_EQUAL(iid, IID_ ## i)) \
     { *outObject = (void *)(i *)this; AddRef(); return S_OK; }
 
-#define MY_QUERYINTERFACE_ENTRY_UNKNOWN(i) if (iid == IID_IUnknown) \
+#define MY_QUERYINTERFACE_ENTRY_UNKNOWN(i) if (IS_GUID_EQUAL(iid, IID_IUnknown)) \
     { *outObject = (void *)(IUnknown *)(i *)this; AddRef(); return S_OK; }
 
 #define MY_QUERYINTERFACE_BEGIN2(i) MY_QUERYINTERFACE_BEGIN \

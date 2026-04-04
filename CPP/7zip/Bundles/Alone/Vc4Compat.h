@@ -182,6 +182,9 @@ inline int ObjVecFindLinear(const V& vec, const T& item)
 }
 #endif
 
+#endif // GUID_OPERATOR_DEFINED
+#endif // __cplusplus
+
 // -----------------------------------------------------------------
 // 11. Silenciar warnings de VC4 que son ruido en este port
 // -----------------------------------------------------------------

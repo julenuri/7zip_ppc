@@ -151,11 +151,11 @@ HRESULT CCoder::CodeReal(ISequentialInStream *inStream, ISequentialOutStream *ou
     if(m_InBitStream.ReadBits(1) == kMatchId) // match
     {
       UInt32 lowDistBits = m_InBitStream.ReadBits(m_NumDistanceLowDirectBits);
-      UInt32 distance = m_DistanceDecoder.DecodeSymbol(&m_InBitStream);
+      UInt32 distance = m_DistanceDecoder.DecodeSymbol(&NCompress::NHuffman::CBitDecoderAdapter<NBitl::CDecoder<CInBuffer> >(&m_InBitStream));
       if (distance >= kDistanceTableSize)
         return S_FALSE;
       distance = (distance << m_NumDistanceLowDirectBits) + lowDistBits;
-      UInt32 lengthSymbol = m_LengthDecoder.DecodeSymbol(&m_InBitStream);
+      UInt32 lengthSymbol = m_LengthDecoder.DecodeSymbol(&NCompress::NHuffman::CBitDecoderAdapter<NBitl::CDecoder<CInBuffer> >(&m_InBitStream));
       if (lengthSymbol >= kLengthTableSize)
         return S_FALSE;
       UInt32 length = lengthSymbol + m_MinMatchLength;
@@ -176,7 +176,7 @@ HRESULT CCoder::CodeReal(ISequentialInStream *inStream, ISequentialOutStream *ou
       Byte b;
       if (m_LiteralsOn)
       {
-        UInt32 temp = m_LiteralDecoder.DecodeSymbol(&m_InBitStream);
+        UInt32 temp = m_LiteralDecoder.DecodeSymbol(&NCompress::NHuffman::CBitDecoderAdapter<NBitl::CDecoder<CInBuffer> >(&m_InBitStream));
         if (temp >= kLiteralTableSize)
           return S_FALSE;
         b = (Byte)temp;

@@ -27,7 +27,7 @@ bool CCoder::DeCodeLevelTable(Byte *values, int numSymbols)
   int i = 0;
   do
   {
-    UInt32 number = m_LevelDecoder.DecodeSymbol(&m_InBitStream);
+    UInt32 number = m_LevelDecoder.DecodeSymbol(&NCompress::NHuffman::CBitDecoderAdapter<NBitl::CDecoder<CInBuffer> >(&m_InBitStream));
     if (number < kTableDirectLevels)
       values[i++] = (Byte)number;
     else if (number < kLevelTableSize)
@@ -176,7 +176,7 @@ HRESULT CCoder::CodeSpec(UInt32 curSize)
       if (m_InBitStream.NumExtraBytes > 4)
         return S_FALSE;
 
-      UInt32 number = m_MainDecoder.DecodeSymbol(&m_InBitStream);
+      UInt32 number = m_MainDecoder.DecodeSymbol(&NCompress::NHuffman::CBitDecoderAdapter<NBitl::CDecoder<CInBuffer> >(&m_InBitStream));
       if (number < 0x100)
       {
         m_OutWindowStream.PutByte((Byte)number);
@@ -209,7 +209,7 @@ HRESULT CCoder::CodeSpec(UInt32 curSize)
         UInt32 locLen = len;
         if (locLen > curSize)
           locLen = (UInt32)curSize;
-        number = m_DistDecoder.DecodeSymbol(&m_InBitStream);
+        number = m_DistDecoder.DecodeSymbol(&NCompress::NHuffman::CBitDecoderAdapter<NBitl::CDecoder<CInBuffer> >(&m_InBitStream));
         if (number >= _numDistLevels)
           return S_FALSE;
         UInt32 distance = kDistStart[number] + m_InBitStream.ReadBits(kDistDirectBits[number]);

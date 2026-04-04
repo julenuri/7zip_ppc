@@ -55,7 +55,7 @@ bool CDecoder::ReadTable(Byte *lastLevels, Byte *newLevels, UInt32 numSymbols)
       num--;
       continue;
     }
-    UInt32 number = m_LevelDecoder.DecodeSymbol(&m_InBitStream);
+    UInt32 number = m_LevelDecoder.DecodeSymbol(&NCompress::NHuffman::CBitDecoderAdapter<NBitStream::CDecoder >(&m_InBitStream));
     if (number == kLevelSymbolZeros)
     {
       num = kLevelSymbolZerosStartValue + (int)ReadBits(kLevelSymbolZerosNumBits);
@@ -73,7 +73,7 @@ bool CDecoder::ReadTable(Byte *lastLevels, Byte *newLevels, UInt32 numSymbols)
       else
       {
         num = kLevelSymbolSameStartValue + (int)ReadBits(kLevelSymbolSameNumBits);
-        number = m_LevelDecoder.DecodeSymbol(&m_InBitStream);
+        number = m_LevelDecoder.DecodeSymbol(&NCompress::NHuffman::CBitDecoderAdapter<NBitStream::CDecoder >(&m_InBitStream));
         if (number > kNumHuffmanBits)
           return false;
       }
@@ -223,7 +223,7 @@ HRESULT CDecoder::CodeSpec(UInt32 curSize)
     }
     else while(next > 0)
     {
-      UInt32 number = m_MainDecoder.DecodeSymbol(&m_InBitStream);
+      UInt32 number = m_MainDecoder.DecodeSymbol(&NCompress::NHuffman::CBitDecoderAdapter<NBitStream::CDecoder >(&m_InBitStream));
       if (number < 256)
       {
         m_OutWindowStream.PutByte((Byte)number);
@@ -239,7 +239,7 @@ HRESULT CDecoder::CodeSpec(UInt32 curSize)
         UInt32 len = kMatchMinLen + lenSlot;
         if (lenSlot == kNumLenSlots - 1)
         {
-          UInt32 lenTemp = m_LenDecoder.DecodeSymbol(&m_InBitStream);
+          UInt32 lenTemp = m_LenDecoder.DecodeSymbol(&NCompress::NHuffman::CBitDecoderAdapter<NBitStream::CDecoder >(&m_InBitStream));
           if (lenTemp >= kNumLenSymbols)
             return S_FALSE;
           len += lenTemp;
@@ -269,7 +269,7 @@ HRESULT CDecoder::CodeSpec(UInt32 curSize)
           if (m_AlignIsUsed && numDirectBits >= kNumAlignBits)
           {
             distance += (m_InBitStream.ReadBits(numDirectBits - kNumAlignBits) << kNumAlignBits);
-            UInt32 alignTemp = m_AlignDecoder.DecodeSymbol(&m_InBitStream);
+            UInt32 alignTemp = m_AlignDecoder.DecodeSymbol(&NCompress::NHuffman::CBitDecoderAdapter<NBitStream::CDecoder >(&m_InBitStream));
             if (alignTemp >= kAlignTableSize)
               return S_FALSE;
             distance += alignTemp;

@@ -68,7 +68,8 @@ HRESULT CDecoder::CodeSpec(UInt32 size, Byte *memStream)
   }
   while (size != 0)
   {
-    int symbol = _info.DecodeSymbol(&NCompress::NHuffman::CBitDecoderAdapter<NRangeCoder::CDecoder >(&_rangeDecoder));
+  NCompress::NHuffman::CBitDecoderAdapter<NRangeCoder::CDecoder > _hba__rangeDecoder(&_rangeDecoder);
+    int symbol = _info.DecodeSymbol(&_hba__rangeDecoder);
     if (symbol < 0)
     {
       _remainLen = kLenIdFinished;

@@ -9,5 +9,6 @@
 
 #include "../../../Common/MyWindows.h"
 #include "../../../Common/NewHandler.h"
+#include "../../../Common/Defs.h"
 
 #endif

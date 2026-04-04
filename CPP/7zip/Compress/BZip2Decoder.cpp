@@ -225,8 +225,9 @@ static HRESULT NO_INLINE ReadBlock(NBitm::CDecoder<CInBuffer> *m_InStream,
       }
       groupSize--;
         
-      UInt32 nextSym = huffmanDecoder->DecodeSymbol(&NCompress::NHuffman::CBitDecoderAdapter<NBitm::CDecoder<CInBuffer> >(&m_InStream));
-      
+      NCompress::NHuffman::CBitDecoderAdapter<NBitm::CDecoder<CInBuffer> > bitDecoderAdapter(m_InStream);
+      UInt32 nextSym = huffmanDecoder->DecodeSymbol(&bitDecoderAdapter);
+
       if (nextSym < 2)
       {
         runCounter += ((UInt32)(nextSym + 1) << runPower++);

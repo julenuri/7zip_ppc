@@ -183,6 +183,24 @@ inline int ObjVecFindLinear(const V& vec, const T& item)
 #endif
 
 // -----------------------------------------------------------------
+// 10. GUID operator== / operator!=
+//     En builds _WIN32, windows.h define GUID_DEFINED y MyGuidDef.h
+//     salta su bloque entero, dejando sin definir operator==(GUID,GUID).
+//     MY_QUERYINTERFACE_ENTRY lo necesita para comparar IIDs.
+// -----------------------------------------------------------------
+#ifdef __cplusplus
+#include <string.h>
+inline int operator==(const GUID& g1, const GUID& g2)
+{
+    return memcmp(&g1, &g2, sizeof(GUID)) == 0;
+}
+inline int operator!=(const GUID& g1, const GUID& g2)
+{
+    return !(g1 == g2);
+}
+#endif
+
+// -----------------------------------------------------------------
 // 11. Silenciar warnings de VC4 que son ruido en este port
 // -----------------------------------------------------------------
 // C4237: 'bool' keyword is reserved for future use

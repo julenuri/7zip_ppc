@@ -440,4 +440,4 @@ $(CRYPTO_OBJS): ..\..\Crypto\$(*B).cpp
 # Reglas de compilacion C puro (SIN PCH, /Fo especificado explicitamente)
 # ---------------------------------------------------------------------------
 $(C_OBJS): ..\..\..\..\C\$(*B).c
-	$(CPP) $(CFLAGS_C) ..\..\..\..\ C\$(*B).c
+	$(CPP) $(CFLAGS_C) ..\..\..\..\C\$(*B).c

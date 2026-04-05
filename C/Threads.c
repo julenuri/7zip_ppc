@@ -26,10 +26,10 @@ static WRes MyCloseHandle(HANDLE *h)
 
 WRes Thread_Create(CThread *thread, THREAD_FUNC_RET_TYPE (THREAD_FUNC_CALL_TYPE *startAddress)(void *), LPVOID parameter)
 {
-  unsigned threadId; /* Windows Me/98/95: threadId parameter may not be NULL in _beginthreadex/CreateThread functions */
+  DWORD threadId;
   thread->handle =
-    /* CreateThread(0, 0, startAddress, parameter, 0, &threadId); */
-    (HANDLE)_beginthreadex(NULL, 0, startAddress, parameter, 0, &threadId);
+    CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)startAddress, parameter, 0, &threadId);
+    /* _beginthreadex not available on NT4 PPC SDK - using CreateThread */
     /* maybe we must use errno here, but probably GetLastError() is also OK. */
   return HandleToWRes(thread->handle);
 }

@@ -326,6 +326,7 @@ C_OBJS = \
 # ---------------------------------------------------------------------------
 OBJS = \
   $O\StdAfx.obj \
+  $O\GuidDefs.obj \
   $(CONSOLE_OBJS) \
   $(COMMON_OBJS) \
   $(WIN_OBJS) \
@@ -359,6 +360,9 @@ $O\7za.exe: $(OBJS)
 	$(LINK) $(LFLAGS) $(LIBS) @<<
 $(OBJS)
 <<
+
+$O\GuidDefs.obj: GuidDefs.cpp
+	$(CPP) $(CFLAGS_C) GuidDefs.cpp
 
 clean:
 	-del /Q $O\*.obj $O\*.res $O\*.pch $O\*.exe
@@ -436,4 +440,4 @@ $(CRYPTO_OBJS): ..\..\Crypto\$(*B).cpp
 # Reglas de compilacion C puro (SIN PCH, /Fo especificado explicitamente)
 # ---------------------------------------------------------------------------
 $(C_OBJS): ..\..\..\..\C\$(*B).c
-	$(CPP) $(CFLAGS_C) ..\..\..\..\C\$(*B).c
+	$(CPP) $(CFLAGS_C) ..\..\..\..\ C\$(*B).c

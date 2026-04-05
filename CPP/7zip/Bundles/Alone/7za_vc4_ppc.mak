@@ -64,12 +64,12 @@ CFLAGS_PCH_USE    = $(CFLAGS) /Yu"StdAfx.h" /Fp$O\a.pch
 #
 #   /nologo          sin banner
 #   /subsystem:console
-#   /machine:MPPC    target PowerPC NT
+#   /machine:PPC    target PowerPC NT
 #   /out:...         ejecutable de salida
 #
 # NOTA: /OPT:NOWIN98 y /OPT:ICF son flags de VC6, no existen en VC4.
 # ---------------------------------------------------------------------------
-LFLAGS = /nologo /subsystem:console /machine:MPPC /out:$O\7za.exe
+LFLAGS = /nologo /subsystem:console /machine:PPC /out:$O\7za.exe
 
 LIBS = kernel32.lib user32.lib gdi32.lib advapi32.lib \
        shell32.lib ole32.lib oleaut32.lib uuid.lib
@@ -356,7 +356,9 @@ $O:
 	if not exist "$O" mkdir "$O"
 
 $O\7za.exe: $(OBJS)
-	$(LINK) $(LFLAGS) $(OBJS) $(LIBS)
+	$(LINK) $(LFLAGS) $(LIBS) @<<
+$(OBJS)
+<<
 
 clean:
 	-del /Q $O\*.obj $O\*.res $O\*.pch $O\*.exe
